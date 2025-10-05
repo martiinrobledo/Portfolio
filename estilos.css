@@ -1,166 +1,230 @@
-body{
+/* ==== ESTILOS GENERALES ==== */
+body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
+    background-color: #f5f5f5;
+    color: #303030;
+    scroll-behavior: smooth;
 }
-header{
+
+h1, h2, h3 {
+    margin: 10px 0;
+}
+
+/* ==== HEADER ==== */
+header {
     height: 65px;
-    background-color: #7b1fa2;
+    background: linear-gradient(90deg, #7b1fa2, #9c27b0);
     color: white;
     display: flex;
     align-items: center;
-    padding-left: 25px;
+    padding: 0 25px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
-.cara{
-    border-radius: 500px;
-    height: 200px;
+
+header h3 {
+    font-size: 1.3rem;
+    letter-spacing: 1px;
 }
-.uno{
+
+/* ==== SECCIÓN 1: Presentación ==== */
+.uno {
     width: 100%;
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    height: calc(100vh - 65px);
-    background-color: #303030;
+    align-items: center;
+    min-height: calc(100vh - 65px);
+    background: linear-gradient(135deg, #303030, #424242);
     color: white;
-    /* padding-top: 10%; */
+    padding: 40px 0;
 }
-.caja-central{
-    margin-top: 10%;
-    width: 50%;
+
+.caja-central {
+    width: 60%;
     display: flex;
-    flex-direction: row;
     border-radius: 20px;
     overflow: hidden;
-    height: 50%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    background-color: #fff;
 }
-.caja-cara{
+
+.caja-central:hover {
+    transform: scale(1.02);
+}
+
+.caja-cara {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 40%;
     background-color: #424242;
 }
-.caja-presentacion{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60%;
-    background-color: #F2F2F2;
-    color: #303030;
-    padding: 10px;
+
+.cara {
+    border-radius: 50%;
+    height: 180px;
+    width: 180px;
+    object-fit: cover;
+    border: 3px solid #9c27b0;
+    box-shadow: 0 0 10px rgba(255,255,255,0.5);
 }
 
-.dos{
-    background-color: #F2F2F2;
-    height: 700px;
+.caja-presentacion {
+    width: 60%;
+    background-color: #f2f2f2;
+    color: #303030;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    color: #303030;
-    padding-left: 20%;
-    padding-right: 20%;
-}
-.aptitudes{
-    width: 50%;
-}
-.tech-list{
-    display: flex;
-    justify-content: space-between;
-    padding-top: 10px;
+    text-align: left;
 }
 
-.tech{
-    height: 90px;
-}
-
-.tres{
-    background-color: #303030;
-    height: 600px;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: center;
-    color: #F2F2F2;
-}
-.proyectos{
-    width: 60%;
-    display: flex;
-    justify-content: space-between;
-}
-.card{
+/* ==== SECCIÓN 2: Sobre mí ==== */
+.dos {
+    background-color: #fff;
+    padding: 80px 15%;
     text-align: center;
-    width: 30%;
-    border: solid #F2F2F2 1px;
-    border-radius: 10px;
-    padding: 10px;
-}
-.card img{
-    width: 100%;
-}
-.card a, footer a {
-    color: white;
 }
 
-.red-social{
-    height: 60px;
-    background-color: #F2F2F2;
-    border-radius: 10px;
+.dos h2 {
+    color: #7b1fa2;
+    margin-bottom: 10px;
 }
 
-footer{
-    background-color: #424242;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    color: #F2F2F2;
-    height: 250px;
+.dos p, .dos ul {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
 }
-.contacto{
-    width: 30%;
+
+.aptitudes {
+    width: 60%;
+    margin: 20px auto;
+}
+
+.tech-list {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 15px;
 }
 
-@media (max-width: 1000px) {
-    .caja-central{
-        width: 90%;
-        height: 70%;
-        flex-direction: column;
-    }
-    .caja-cara{
-        width: 100%;
-        height: 50%;
-    }
-    .caja-presentacion{
-        width: 100%;
-        height: 50%;
-        align-items: flex-start;
-    }
-    .aptitudes{
-        width: auto;
-    }
-    .dos{
-        height: auto;
-        padding: 0 10px 10px 10px;
+.tech {
+    height: 70px;
+    filter: grayscale(30%);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.tech:hover {
+    transform: scale(1.1);
+    filter: none;
+}
 
-    }
-    .tres{
-        height: auto;
-    }
-    .proyectos{
+/* ==== SECCIÓN 3: Proyectos ==== */
+.tres {
+    background: linear-gradient(135deg, #303030, #212121);
+    color: #F2F2F2;
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.tres h2 {
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.proyectos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card {
+    background-color: #424242;
+    text-align: center;
+    width: 300px;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.5);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #9c27b0;
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.card a:hover {
+    background-color: #ba68c8;
+}
+
+/* ==== FOOTER ==== */
+footer {
+    background-color: #212121;
+    color: #F2F2F2;
+    padding: 40px 0;
+    text-align: center;
+}
+
+footer h2 {
+    color: #9c27b0;
+}
+
+.contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.red-social {
+    height: 50px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.red-social:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(156,39,176,0.8);
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 900px) {
+    .caja-central {
+        width: 90%;
         flex-direction: column;
+    }
+    .caja-cara, .caja-presentacion {
         width: 100%;
+        text-align: center;
+        padding: 20px;
+    }
+    .aptitudes {
+        width: 100%;
+    }
+    .proyectos {
+        flex-direction: column;
         align-items: center;
-        justify-content: space-between;
-        padding-bottom: 20px;
-    }
-    .card{
-        width: 80%;
-        margin-top: 20px;
-    }
-    .red-social{
-        margin: 0 10px 0 10px;
     }
 }
