@@ -1,71 +1,41 @@
-/* ==== RESETEO GENERAL ==== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Open Sans', sans-serif;
-    background-color: #f5f5f5;
-    color: #303030;
-    scroll-behavior: smooth;
-}
-
-/* ==== HEADER ==== */
-header {
-    height: 65px;
-    background: linear-gradient(90deg, #7b1fa2, #9c27b0);
-    color: white;
-    display: flex;
-    align-items: center;
-    padding-left: 25px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-}
-
-/* ==== SECCIÓN 1: Presentación ==== */
-.uno {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: calc(100vh - 65px);
-    background: linear-gradient(135deg, #303030, #424242);
-    color: white;
-    padding: 40px 0;
-}
-
-.caja-central {
-    width: 60%;
-    display: flex;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    transition: transform 0.3s ease;
-    background-color: #fff;
-}
-
-.caja-central:hover {
-    transform: scale(1.02);
-}
-
-.caja-cara {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40%;
+footer {
     background-color: #424242;
+    color: #F2F2F2;
+    padding: 20px 0; /* más compacto */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-.cara {
-    border-radius: 50%;
-    height: 180px;
-    width: 180px;
-    object-fit: cover;
-    border: 3px solid #9c27b0;
-    box-shadow: 0 0 10px rgba(255,255,255,0.5);
+footer h2 {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    color: #9c27b0;
 }
 
-.caja-presentacion {
-    width: 60%;
-    background-color: #f2f
+.contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* espacio moderado entre íconos */
+    flex-wrap: wrap; /* para que se acomoden en pantallas chicas */
+    margin-top: 5px;
+}
+
+.contacto hr {
+    display: none; /* sacamos las líneas */
+}
+
+.red-social {
+    height: 45px;
+    width: 45px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.red-social:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 12px rgba(156,39,176,0.8);
+}
