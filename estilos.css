@@ -1,94 +1,71 @@
 /* ==== RESETEO GENERAL ==== */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* ==== BODY ==== */
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #121212;
-  color: #F2F2F2;
-  line-height: 1.6;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f5f5f5;
+    color: #303030;
+    scroll-behavior: smooth;
 }
 
 /* ==== HEADER ==== */
 header {
-  background-color: #1E1E1E;
-  padding: 20px;
-  text-align: center;
-  border-bottom: 2px solid #9c27b0;
+    height: 65px;
+    background: linear-gradient(90deg, #7b1fa2, #9c27b0);
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
-header h1 {
-  font-size: 2.5rem;
-  color: #9c27b0;
+/* ==== SECCIÓN 1: Presentación ==== */
+.uno {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 65px);
+    background: linear-gradient(135deg, #303030, #424242);
+    color: white;
+    padding: 40px 0;
 }
 
-header p {
-  font-size: 1rem;
-  color: #E0E0E0;
-  margin-top: 5px;
+.caja-central {
+    width: 60%;
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+    background-color: #fff;
 }
 
-/* ==== SECCIONES ==== */
-section {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 20px;
-  background-color: #1E1E1E;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+.caja-central:hover {
+    transform: scale(1.02);
 }
 
-/* ==== TITULOS ==== */
-h2 {
-  color: #9c27b0;
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 1.8rem;
+.caja-cara {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    background-color: #424242;
 }
 
-/* ==== PARRAFOS ==== */
-p {
-  font-size: 1rem;
-  color: #E0E0E0;
-  margin-bottom: 15px;
-  text-align: justify;
+.cara {
+    border-radius: 50%;
+    height: 180px;
+    width: 180px;
+    object-fit: cover;
+    border: 3px solid #9c27b0;
+    box-shadow: 0 0 10px rgba(255,255,255,0.5);
 }
 
-/* ==== BOTONES ==== */
-button, .btn {
-  background-color: #9c27b0;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: transform 0.2s ease, background-color 0.3s ease;
-  text-decoration: none;
-  display: inline-block;
-}
-
-button:hover, .btn:hover {
-  background-color: #BA68C8;
-  transform: scale(1.05);
-}
-
-/* ==== LISTAS ==== */
-ul {
-  list-style-type: none;
-  margin-top: 10px;
-}
-
-ul li {
-  background: rgba(156, 39, 176, 0.1);
-  margin-bottom: 8px;
-  padding: 8px 12px;
-  border-radius: 6px;
-}
-
-/* ==== FOOTER ==== */
-footer {
-  background-c
+.caja-presentacion {
+    width: 60%;
+    background-color: #f2f
