@@ -178,14 +178,23 @@ footer h2{
 }
 
 /* ==== CONTACTO ==== */
-.contacto{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px; /* espacio entre íconos */
-    flex-wrap: wrap;
-    margin-top: 5px;
+.contacto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px; /* espacio entre íconos */
+  margin-top: 10px;
 }
 
-.contacto hr{
-    display: none;
+.contacto a {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.red-social {
+  width: 28px !important;   /* fuerza el tamaño */
+  height: 28px !important;
+  object-fit: contain;       /* ajusta la imagen */
+  display: block;            /* quita el espacio interno */
+}
